@@ -1,0 +1,130 @@
+<nz-row [nzGutter]="16">
+  <nz-col [nzSpan]="12">
+    <nz-statistic [nzValue]="1128 | number" [nzTitle]="'Feedback'" [nzPrefix]="prefixTpl"></nz-statistic>
+    <ng-template #prefixTpl><i nz-icon type="like"></i></ng-template>
+  </nz-col>
+  <nz-col [nzSpan]="12">
+    <nz-statistic [nzValue]="93" [nzTitle]="'Unmerged'" [nzSuffix]="'/ 100'"></nz-statistic>
+  </nz-col>
+</nz-row>
+
+<div style="background: #ECECEC; padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="94.9 | number: '1.0-2'"
+          [nzTitle]="'Testing'"
+          [nzPrefix]="prefixTplOne"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#3F8600' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplOne><i nz-icon type="arrow-up"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="44.5 | number: '1.0-2'"
+          [nzTitle]="'Microsoft Azure'"
+          [nzPrefix]="prefixTplTwo"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#CF1322' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon type="arrow-down"></i></ng-template>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</div>
+<div style="background: #ECECEC; padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="51.3 | number: '1.0-2'"
+          [nzTitle]="'Amazon Web Services'"
+          [nzPrefix]="prefixTplOne"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#3F8600' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplOne><i nz-icon type="arrow-up"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="17.3 | number: '1.0-2'"
+          [nzTitle]="'Servidores'"
+          [nzPrefix]="prefixTplTwo"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#CF1322' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon type="arrow-down"></i></ng-template>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</div>
+<div style="background: #ECECEC; padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="11.28 | number: '1.0-2'"
+          [nzTitle]="'Digital Ocean'"
+          [nzPrefix]="prefixTplOne"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#3F8600' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplOne><i nz-icon type="arrow-up"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="9.3 | number: '1.0-2'"
+          [nzTitle]="'Docker Files'"
+          [nzPrefix]="prefixTplTwo"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#CF1322' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon type="arrow-down"></i></ng-template>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</div>
+<div style="background: #ECECEC; padding: 30px;">
+  <nz-row [nzGutter]="16">
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="25.28 | number: '1.0-2'"
+          [nzTitle]="'Dropbox'"
+          [nzPrefix]="prefixTplOne"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#3F8600' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplOne><i nz-icon type="arrow-up"></i></ng-template>
+      </nz-card>
+    </nz-col>
+    <nz-col [nzSpan]="12">
+      <nz-card>
+        <nz-statistic
+          [nzValue]="68.3 | number: '1.0-2'"
+          [nzTitle]="'Google Cloud'"
+          [nzPrefix]="prefixTplTwo"
+          [nzSuffix]="'%'"
+          [nzValueStyle]="{ color: '#CF1322' }"
+        >
+        </nz-statistic>
+        <ng-template #prefixTplTwo><i nz-icon type="arrow-down"></i></ng-template>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+</div>
