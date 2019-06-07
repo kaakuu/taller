@@ -1,4 +1,4 @@
-<nz-list *ngIf="data.length" [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
+<nz-list *ngIf="!loading" [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'">
   <ng-template #item let-item>
     <nz-comment [nzAuthor]="item.author" [nzDatetime]="item.displayTime">
       <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="item.avatar"></nz-avatar>
@@ -8,16 +8,19 @@
     </nz-comment>
   </ng-template>
 </nz-list>
+
+<div *ngFor="let item of items">
+  <nz-skeleton [nzLoading]="loading" [nzActive]="true" [nzAvatar]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
+</div>
 <nz-comment>
-  <nz-avatar nz-comment-avatar nzIcon="user" [nzSrc]="user.avatar"></nz-avatar>
-  <nz-comment-content>
-    <nz-form-item>
-      <textarea [(ngModel)]="inputValue" nz-input rows="4"></textarea>
-    </nz-form-item>
-    <nz-form-item>
-      <button nz-button nzType="primary" [nzLoading]="submitting" [disabled]="!inputValue" (click)="handleSubmit()">
-        Add Comment
-      </button>
-    </nz-form-item>
-  </nz-comment-content>
-</nz-comment>
+<nz-comment-content>
+  <nz-form-item>
+    <textarea [(ngModel)]="inputValue" nz-input rows="4"></textarea>
+  </nz-form-item>
+  <nz-form-item>
+    <button nz-button nzType="primary" [nzLoading]="submitting" [disabled]="!inputValue" (click)="handleSubmit()">
+      Add Comment
+    </button>
+  </nz-form-item>
+</nz-comment-content>
+</nz-comment> 

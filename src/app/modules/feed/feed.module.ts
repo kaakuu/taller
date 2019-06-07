@@ -11,6 +11,7 @@ import { NzListModule } from 'ng-zorro-antd';
 import { NzFormModule } from 'ng-zorro-antd';
 import { NzButtonModule } from 'ng-zorro-antd';
 import { NzGridModule } from 'ng-zorro-antd';
+import { NzSkeletonModule } from 'ng-zorro-antd';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NzListModule,
     NzFormModule,
     NzButtonModule,
-    NzGridModule
+    NzGridModule,
+    NzSkeletonModule
   ] 
 })
 export class FeedModule { }
