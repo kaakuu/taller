@@ -17,6 +17,7 @@ const routes: Routes = [
       { path: 'home', loadChildren: '../home/home.module#HomeModule' },
       { path: 'calendar', loadChildren: '../calendar/calendar.module#CalendarModule' },
       { path: 'data', loadChildren: '../tables-data/tables-data.module#TablesDataModule' },
+      { path: 'onpush', loadChildren: '../change-detection/change-detection.module#ChangeDetectionModule' },
     //   { path: 'account-settings', loadChildren: '../account-settings/account-settings.module#AccountSettingsModule' },
     ]
   },

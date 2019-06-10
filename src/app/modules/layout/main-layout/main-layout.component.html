@@ -1,12 +1,12 @@
 <nz-layout class="layout">
-  <nz-header style="position:fixed; width:100%">
+  <nz-header >
       <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
       
           <app-header ></app-header>    
     </ul>
   </nz-header>
-  <nz-content style="padding:0 50px;margin-top:64px;">  
+  <nz-content style="padding:1rem 1rem 4rem 4rem; background: white;">  
     <router-outlet></router-outlet>
   </nz-content>
-  <nz-footer style="text-align: center;">Ant Design ©2019 Implement By Angular</nz-footer>
+  <nz-footer style="text-align: center; position: fixed; width: 100%; bottom: 0">Ant Design ©2019 Implement By Angular</nz-footer>
 </nz-layout>

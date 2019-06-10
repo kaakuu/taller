@@ -12,7 +12,7 @@
 <div *ngFor="let item of items">
   <nz-skeleton [nzLoading]="loading" [nzActive]="true" [nzAvatar]="true" [nzParagraph]="{ rows: 4 }"></nz-skeleton>
 </div>
-<nz-comment>
+<nz-comment *ngIf="!loading">
 <nz-comment-content>
   <nz-form-item>
     <textarea [(ngModel)]="inputValue" nz-input rows="4"></textarea>
