@@ -18,7 +18,7 @@ const routes: Routes = [
       { path: 'calendar', loadChildren: '../calendar/calendar.module#CalendarModule' },
       { path: 'data', loadChildren: '../tables-data/tables-data.module#TablesDataModule' },
       { path: 'onpush', loadChildren: '../change-detection/change-detection.module#ChangeDetectionModule' },
-    //   { path: 'account-settings', loadChildren: '../account-settings/account-settings.module#AccountSettingsModule' },
+      { path: 'lazy-images', loadChildren: '../lazy-images/lazy-images.module#LazyImagesModule' },
     ]
   },
   {
