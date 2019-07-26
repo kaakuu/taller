@@ -1,33 +1,45 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'default-image',
     styles: [`
         img {
             width: 100%;
+            max-width: 500px;
         }
         img.hidden {
             visibility: hidden;
         }
+
+        .contenedor {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            height: 500px;        
+        }
+
     `],
     template: `
-        <div *ngIf="isLoading">Image is loading...</div>
+        <div #ref *ngIf="isLoading">Image is loading...</div>
         <div *ngIf="!isLoading">Image is loaded</div>
-        <div [ngClass]="{'hidden': isLoading}">
-            <img
-                [defaultImage]="defaultImage"
-                [errorImage]="errorImage"
-                [lazyLoad]="image"
-                (onLoad)="onLoadImage($event)">
+        <div class="contenedor">
+            <div [ngClass]="{'hidden': isLoading}">
+                <img
+                    [defaultImage]="defaultImage"
+                    [errorImage]="errorImage"
+                    [lazyLoad]="image"
+                    (onLoad)="onLoadImage($event)">
+            </div>
         </div>
     `,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OnLoadComponent {
+    @ViewChild('ref') ref : ElementRef;
     isLoading = true;
     errorImage = 'https://i.imgur.com/XkU4Ajf.png';
-    defaultImage = 'https://www.placecage.com/1000/1000';
-    image = 'https://images.unsplash.com/photo-1467932760935-519284fc87fa?dpr=2&auto=compress,format&fit=crop&w=1199&h=800&q=80';
+    defaultImage = 'https://img.devrant.com/devrant/rant/r_647810_4FeCH.gif';
+    image = 'https://rxjs-dev.firebaseapp.com/generated/images/marketing/home/Rx_Logo-512-512.png';
 
     constructor(private cd: ChangeDetectorRef) {}
 
@@ -36,7 +48,8 @@ export class OnLoadComponent {
             this.isLoading = false;
             this.cd.detectChanges();
         } else {
-            alert('Image cannot be loaded!');
+            this.ref.nativeElement.innerHTML = " Error al cargar la imagen...    "
+            alert('Fallo al cargar la imagen..');
         }
     }
 }

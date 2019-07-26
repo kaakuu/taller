@@ -56,7 +56,7 @@ export class ScrollContainerComponent {
         'https://images.unsplash.com/photo-1471201187657-6406da15e43b?dpr=2&auto=compress,format&fit=crop&w=1199&h=1199&q=80'
     ];
     errorImage = 'https://i.imgur.com/XkU4Ajf.png';
-    defaultImage = 'https://www.placecage.com/1000/1000';
+    defaultImage = 'https://img.devrant.com/devrant/rant/r_647810_4FeCH.gif';
 
     constructor(private elmRef: ElementRef) {}
 

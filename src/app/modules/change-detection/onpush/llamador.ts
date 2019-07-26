@@ -13,7 +13,7 @@ import { CellDataService } from '../services/celldataservice';
 
 export class LlamadorComponent { 
   name = 'Angular 123'; 
-  private grid: IGrid;
+  public grid: IGrid;
   
   constructor(cellDataService: CellDataService) {
     this.grid =  cellDataService.getGridState();

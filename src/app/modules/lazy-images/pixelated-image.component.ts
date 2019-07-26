@@ -6,8 +6,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
         .wrapper {
             position: relative;
             width: 100%;
-            height: 1000px;
-            min-width: 960px;
+            height: 500px;
+            min-width: 400px;
         }
         img {
             position: absolute;

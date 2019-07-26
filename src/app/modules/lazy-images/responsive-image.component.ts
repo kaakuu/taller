@@ -68,7 +68,7 @@ export class ResponsiveImageComponent {
     screen_sm = '768px';
 
     errorImage = 'https://i.imgur.com/XkU4Ajf.png';
-    defaultImage = 'https://www.placecage.com/1000/1000';
+    defaultImage = 'https://img.devrant.com/devrant/rant/r_647810_4FeCH.gif';
 
     images1 = `https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?dpr=2&auto=compress,format&fit=crop&w=1199&h=800&q=80 700w,
                https://images.unsplash.com/photo-1431290897562-d9453d416346?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80 900w,
