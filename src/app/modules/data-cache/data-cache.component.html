@@ -1,0 +1,17 @@
+<div>
+  <input type="button" value="Borrar cache" (click)="borrarCache()" />
+  <input
+    type="button"
+    value="Borrar cache y recargar"
+    (click)="borrarCacheYRecargar()"
+  />
+  <input type="button" value="Recargar" (click)="recargar()" />
+</div>
+<br />
+<div>
+  {{ loadTime }} ms
+</div>
+<br />
+<div *ngFor="let image of images">
+  <img src="{{ image }}" />
+</div>

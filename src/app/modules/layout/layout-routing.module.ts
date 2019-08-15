@@ -19,6 +19,7 @@ const routes: Routes = [
       { path: 'data', loadChildren: '../tables-data/tables-data.module#TablesDataModule' },
       { path: 'onpush', loadChildren: '../change-detection/change-detection.module#ChangeDetectionModule' },
       { path: 'lazy-images', loadChildren: '../lazy-images/lazy-images.module#LazyImagesModule' },
+      { path: 'data-cache', loadChildren: '../data-cache/data-cache.module#DataCacheModule' },
     ]
   },
   {
